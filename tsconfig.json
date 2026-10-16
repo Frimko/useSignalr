@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es5",
+    "ignoreDeprecations": "6.0",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2020",
+      "esnext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "esnext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "jsx": "react-jsx"
+  },
+  "types": [
+    "vitest/globals"
+  ],
+  "include": [
+    "./tools/**/*",
+    "./src/**/*",
+    "**/*.d.ts"
+  ]
+}

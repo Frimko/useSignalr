@@ -1,0 +1,5 @@
+export const DEFAULT_RESTART_TIME = 10_000;
+
+export const DEFAULT_MAX_RETRY_DELAY = 60 * 60 * 1_000;
+
+export const DEFAULT_MAX_RETRY_COUNT = 10;
