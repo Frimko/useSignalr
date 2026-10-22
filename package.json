@@ -1,6 +1,6 @@
 {
   "name": "use-signalr",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "React hook for managing Microsoft SignalR connections with reconects and correct cancel",
   "type": "module",
   "author": "frimko",
@@ -13,18 +13,25 @@
     "correct cancel",
     "hook"
   ],
+  "homepage": "https://github.com/Frimko/useSignalr",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frimko/useSignalr.git"
+  },
+  "readme": "./README.md",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
+    "dist",
     "build",
     "README.md"
   ],
   "scripts": {
-    "dev": "vite --config tools/vite/vite.config.ts",
     "build": "tsc --noEmit && vite build --config tools/vite/vite.config.ts",
     "prepack:build": "tsx tools/build/index.ts",
     "prepack": "yarn prepack:build && tsx tools/prepack.ts",
+    "publish": "tsx tools/publish.ts",
     "test": "vitest run --config tools/vite/vitest.config.ts",
     "lint:fix": "eslint src --cache --fix",
     "lint": "eslint src --cache",
