@@ -16,7 +16,7 @@ function parsePackageJson(json: string): PackageJson {
 
 function getDistPackageObject(): PackageJson {
   try {
-    const distPackageJson = fs.readFileSync(paths.distPackage, 'utf8');
+    const distPackageJson = fs.readFileSync(paths.prepackPackage, 'utf8');
     return parsePackageJson(distPackageJson);
     // eslint-disable-next-line no-empty
   } catch {}
@@ -51,12 +51,12 @@ function preparePackage(): void {
       'devDependencies',
     ]);
 
-    fs.writeFileSync(paths.distPackage, JSON.stringify(newObject, null, 2), {
+    fs.writeFileSync(paths.prepackPackage, JSON.stringify(newObject, null, 2), {
       encoding: 'utf8',
       flag: 'w',
     });
 
-    copySyncIfExist(paths.readmeFile, paths.distReadmeFile);
+    copySyncIfExist(paths.readmeFile, paths.prepackReadmeFile);
   } catch (error: unknown) {
     console.error(error);
 

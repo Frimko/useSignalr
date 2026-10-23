@@ -17,6 +17,7 @@ function rootDirectory(relativePath: string) {
 
 const paths = {
   rootDir: rootDirectory('.'),
+  envFile: rootDirectory('.env'),
 
   packageJson: packageDirectory('package.json'),
   tsconfigBuild: packageDirectory('tsconfig.build.json'),
@@ -28,10 +29,10 @@ const paths = {
 
   distDir: packageDirectory('dist'),
   prepackDir: packageDirectory('prepack'),
-  distDistDir: packageDirectory('prepack/dist'),
-  distSrcDir: packageDirectory('prepack/src'),
-  distPackage: packageDirectory('prepack/package.json'),
-  distReadmeFile: packageDirectory('prepack/README.md'),
+  prepackDistDir: packageDirectory('prepack/dist'),
+  prepackSrcDir: packageDirectory('prepack/src'),
+  prepackPackage: packageDirectory('prepack/package.json'),
+  prepackReadmeFile: packageDirectory('prepack/README.md'),
 };
 
 export default paths;

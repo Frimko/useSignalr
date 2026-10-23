@@ -10,7 +10,7 @@ const { red, yellow } = chalk;
 
 function mkDir(): void {
   fs.mkdirSync(paths.prepackDir, { recursive: true });
-  fs.mkdirSync(paths.distDistDir, { recursive: true });
+  fs.mkdirSync(paths.prepackDistDir, { recursive: true });
 }
 
 function clean(): void {
@@ -22,7 +22,7 @@ function clean(): void {
 const runBuildTypes = step(
   'generating .d.ts',
   async function buildTypesStep(): Promise<void> {
-    buildTypes(paths.distDistDir);
+    buildTypes(paths.prepackDistDir);
   },
 );
 
@@ -33,7 +33,7 @@ const runBuild = step('es modules', async function buildStep(): Promise<void> {
 const runBuildCopyOtherFiles = step(
   'copy other files',
   async function copyOtherFilesStep(): Promise<void> {
-    await copyOtherFiles(paths.distSrcDir);
+    await copyOtherFiles(paths.prepackSrcDir);
   },
 );
 
